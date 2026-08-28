@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rits Classes | Abacus, Phonics, Vedic Math &amp; Spoken English in Rahatani, Pimpri-Chinchwad</title>
-<meta name="description" content="Rits Classes, Rahatani, Pimpri-Chinchwad — 7+ years nurturing young minds through Abacus, Phonics, Vedic Math, Handwriting, Grammar, Magic Tables, Spoken English, Marathi &amp; Teacher Training. Learn Smart. Speak Confidently. Grow.">
+<meta name="description" content="Rits Classes, Rahatani, Pimpri-Chinchwad — 7+ years nurturing young minds through Abacus, Phonics, Vedic Math, Handwriting, Grammar, Magic Tables, Spoken English, Marathi, Rubik's Cube &amp; Teacher Training. Learn Smart. Speak Confidently. Grow.">
 <meta property="og:title" content="Rits Classes — Learn Smart. Speak Confidently. Grow.">
 <meta property="og:description" content="Premium skill-development classes for children in Rahatani, Pimpri-Chinchwad. Abacus, Vedic Math, Spoken English, Phonics &amp; more.">
 <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "Rits Classes",
-  "description": "Children's learning and skill-development institute offering Abacus, Phonics, Vedic Math, Handwriting, Grammar, Magic Tables, Spoken English, Marathi and Teacher Training.",
+  "description": "Children's learning and skill-development institute offering Abacus, Phonics, Vedic Math, Handwriting, Grammar, Magic Tables, Spoken English, Marathi, Rubik's Cube and Teacher Training.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "FNo. C404, KK Shriram Society, Kalewadi - Rahatani Rd, Madhuban Colony, Rahatani",
@@ -765,7 +765,7 @@ footer{background:var(--ink); color:rgba(255,255,255,.75); padding:70px 0 26px;}
       <div class="about-philosophy">"Learn Smart • Speak Confidently • Grow"</div>
       <div class="about-stats-row">
         <div class="s"><b class="counter" data-count="7">0</b><span>Years Experience</span></div>
-        <div class="s"><b class="counter" data-count="9">0</b><span>Programs Offered</span></div>
+        <div class="s"><b class="counter" data-count="10">0</b><span>Programs Offered</span></div>
         <div class="s"><b class="counter" data-count="1000">0</b><span>+ Students Guided</span></div>
       </div>
       <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
@@ -1015,6 +1015,7 @@ const programs = [
   {icon:"🗣️", key:"spoken-english", name:"Spoken English", desc:"Develop communication, vocabulary, pronunciation and speaking confidence.", color:"#FEF1DA;#D9860F"},
   {icon:"🇮🇳", key:"marathi", name:"Marathi", desc:"Strengthen Marathi reading, writing, vocabulary and communication.", color:"#DEF0EC;#155B50"},
   {icon:"🎓", key:"teacher-training", name:"Teacher Training", desc:"Professional skill-development and training programs for teachers.", color:"#FBE4EB;#C6416B"},
+  {icon:"🧩", key:"rubiks-cube", name:"Rubik's Cube", desc:"Build logic, concentration and problem-solving skills through the world's most famous puzzle.", color:"#DEF0EC;#155B50"},
 ];
 
 const programGrid = document.getElementById('programGrid');
@@ -1123,20 +1124,56 @@ const courseDetails = {
     ]
   },
   "handwriting":{
-    color:"#D9860F,#f0ad4e", overview:"Our Handwriting program focuses on correct pencil grip, letter formation and consistency — helping children write neatly, quickly and with pride in their work.",
-    benefits:["Neater, more legible handwriting","Better writing posture &amp; grip","Improved writing speed","Increased writing confidence"],
-    learn:["Correct grip &amp; posture","Letter formation &amp; spacing","Cursive &amp; print styles","Consistent sizing &amp; alignment"],
-    suitable:"Suitable for children aged <b>5–13 years</b>, including those working to correct existing habits.",
-    outcomes:"Visibly neater handwriting and improved presentation across school notebooks within weeks.",
-    faqs:[["Can this help left-handed children?","Yes, our teachers adapt grip and posture guidance for left-handed writers too."]]
+    color:"#D9860F,#f0ad4e",
+    tagline:"Write Neatly. Present Proudly.",
+    heroDesc:"Handwriting is the skill of writing letters, words and sentences neatly, clearly and correctly by hand. Our Handwriting classes help children develop proper letter formation, spacing, size, alignment and writing speed — habits that make every page look its best.",
+    ageRange:"5–14 years",
+    ageBest:"5–8 years",
+    stdFrom:"UKG / Class 1 onwards",
+    overview:"Our Handwriting program focuses on correct pencil grip, letter formation and consistency — helping children write neatly, quickly and with pride in their work.",
+    benefits:[
+      {icon:"✍️", label:"Develops Neat &amp; Legible Handwriting", desc:"Children produce clear, readable writing that teachers and parents appreciate."},
+      {icon:"🖊️", label:"Improves Letter Formation", desc:"Correct stroke order and shape — for both print and cursive styles."},
+      {icon:"📏", label:"Proper Size, Spacing &amp; Alignment", desc:"Children learn to keep letters consistent and lines straight, improving overall presentation."},
+      {icon:"⚡", label:"Improves Writing Speed", desc:"With correct technique, children write faster without sacrificing neatness."},
+      {icon:"🎯", label:"Develops Better Concentration", desc:"The focused, repetitive nature of handwriting practice builds sustained attention."},
+      {icon:"🤲", label:"Improves Fine Motor Skills", desc:"Grip and stroke exercises strengthen hand muscles and finger coordination."},
+      {icon:"📚", label:"Neater School Notebooks", desc:"Improved handwriting is immediately visible in school work and exam answer sheets."},
+      {icon:"😊", label:"Builds Writing Confidence", desc:"Children take pride in their work when they can see how neat it looks."}
+    ],
+    learn:["Correct grip &amp; posture","Letter formation &amp; stroke order","Cursive &amp; print styles","Consistent sizing &amp; alignment","Spacing between letters &amp; words","Writing speed &amp; flow"],
+    suitable:"Suitable for children aged <b>5–14 years</b>, from UKG / Class 1 onwards — including children looking to correct existing habits.",
+    outcomes:"Visibly neater handwriting, better presentation across school notebooks, and stronger writing confidence — often within just a few weeks.",
+    faqs:[
+      ["Can this help left-handed children?","Yes, our teachers adapt grip and posture guidance specifically for left-handed writers."],
+      ["My child already writes — is it too late to improve?","Not at all. Many children join to correct bad habits or simply refine what they already do. Improvement is visible quickly with regular practice."]
+    ]
   },
   "grammar":{
-    color:"#155B50,#1F7A6C", overview:"Our Grammar program builds strong English fundamentals — sentence structure, tenses and usage — so children write and speak with clarity and correctness.",
-    benefits:["Solid grammar fundamentals","Better sentence construction","Improved written English","Higher scores in school English"],
-    learn:["Parts of speech &amp; tenses","Sentence structure &amp; punctuation","Common usage rules","Applied writing practice"],
-    suitable:"Best for children aged <b>7 years and above</b> looking to strengthen written English.",
-    outcomes:"Clearer, more accurate written English reflected in school work and everyday communication.",
-    faqs:[["Is this aligned with school syllabus?","Our grammar teaching complements school English syllabi across boards."]]
+    color:"#155B50,#1F7A6C",
+    tagline:"Speak Right. Write Right. Shine.",
+    heroDesc:"Grammar is the set of rules that helps us use words correctly and form meaningful sentences. Our Grammar classes teach children how to speak and write English correctly and confidently — building skills they carry into every subject.",
+    ageRange:"5–15 years",
+    ageBest:"5–8 years",
+    stdFrom:"Class 1 onwards",
+    overview:"Our Grammar program builds strong English fundamentals — sentence structure, tenses and usage — so children write and speak with clarity and correctness.",
+    benefits:[
+      {icon:"✍️", label:"Improves Writing Skills", desc:"Children learn to form accurate, well-structured sentences in every written task."},
+      {icon:"🗣️", label:"Improves Spoken English", desc:"Grammar awareness helps children speak more correctly and confidently."},
+      {icon:"📖", label:"Builds Strong English Foundation", desc:"A solid grammar base makes reading, writing and comprehension easier across all subjects."},
+      {icon:"🧠", label:"Improves Sentence Formation", desc:"Children understand how to arrange words meaningfully and logically."},
+      {icon:"🔤", label:"Parts of Speech &amp; Tenses", desc:"Clear understanding of nouns, verbs, adjectives, tenses and more."},
+      {icon:"🎯", label:"Improves Accuracy in English", desc:"Fewer errors in school essays, tests and everyday communication."},
+      {icon:"📚", label:"Helps with School Exams", desc:"Grammar concepts directly support performance in English papers."},
+      {icon:"😊", label:"Builds Communication Confidence", desc:"When children know the rules, they express themselves with ease and pride."}
+    ],
+    learn:["Parts of speech &amp; tenses","Sentence structure &amp; punctuation","Common usage rules","Vocabulary &amp; expression","Applied writing practice","Comprehension &amp; reading skills"],
+    suitable:"Best for children aged <b>5–15 years</b>, from Class 1 onwards. Ideal for children who want to improve their written and spoken English.",
+    outcomes:"Clearer, more accurate written English and greater speaking confidence — reflected in school work and everyday communication.",
+    faqs:[
+      ["Is this aligned with school syllabus?","Our grammar teaching complements school English syllabi across boards — State, CBSE and ICSE."],
+      ["Is it for complete beginners?","Yes, we welcome children from Class 1 onwards — lessons are tailored to the child's current level."]
+    ]
   },
   "magic-tables":{
     color:"#C6416B,#e07094", overview:"Magic Tables uses engaging patterns, tricks and repetition techniques to help children master multiplication tables quickly — and actually enjoy the process.",
@@ -1155,20 +1192,84 @@ const courseDetails = {
     faqs:[["Is this for complete beginners?","Yes — we teach from foundational speaking to advanced fluency, based on your child's level."]]
   },
   "marathi":{
-    color:"#D9860F,#f0ad4e", overview:"Our Marathi program strengthens reading, writing and everyday communication in Marathi — building a strong connection to language and culture.",
-    benefits:["Confident Marathi reading","Neater Marathi writing","Stronger vocabulary","Everyday communication skills"],
-    learn:["Marathi alphabet &amp; reading","Grammar &amp; sentence formation","Vocabulary &amp; comprehension","Spoken practice"],
-    suitable:"Suitable for children of all school-going ages, from beginners to those refining fluency.",
-    outcomes:"Improved reading, writing and everyday confidence in the Marathi language.",
-    faqs:[["Is this only for Marathi-medium students?","No, it's designed for children from any medium looking to strengthen their Marathi skills."]]
+    color:"#D9860F,#f0ad4e",
+    tagline:"Read. Write. Speak Marathi with Pride.",
+    heroDesc:"Marathi is the language primarily spoken in Maharashtra. Our Marathi classes help children learn to read, write, speak, understand and express themselves confidently in Marathi — staying connected to their language, roots and culture.",
+    ageRange:"5–15 years",
+    ageBest:"5–8 years",
+    stdFrom:"UKG / Class 1 onwards",
+    overview:"Our Marathi program strengthens reading, writing and everyday communication in Marathi — building a strong connection to language and culture.",
+    benefits:[
+      {icon:"📖", label:"Improves Reading Skills", desc:"Children read Marathi text fluently and with correct pronunciation."},
+      {icon:"✍️", label:"Develops Writing Skills", desc:"Neat, accurate Marathi writing — from the alphabet to full sentences and paragraphs."},
+      {icon:"🗣️", label:"Improves Speaking &amp; Communication", desc:"Children speak Marathi with greater ease, clarity and confidence in everyday situations."},
+      {icon:"🔤", label:"Builds Strong Vocabulary", desc:"Children learn and retain a growing bank of Marathi words for richer expression."},
+      {icon:"📝", label:"Improves Spelling &amp; Grammar", desc:"Correct Marathi spelling, grammar and sentence structure become second nature."},
+      {icon:"🧠", label:"Develops Language Understanding", desc:"Children understand Marathi as a complete language — not just words, but meaning and context."},
+      {icon:"📚", label:"Performs Better in School", desc:"Direct improvement in Marathi subject scores and school assignments."},
+      {icon:"🌿", label:"Connects with Culture", desc:"Children develop pride in and connection to Maharashtrian language and cultural heritage."}
+    ],
+    learn:["Marathi alphabet &amp; reading","Grammar &amp; sentence formation","Vocabulary &amp; comprehension","Spelling &amp; writing practice","Spoken Marathi practice","Reading passages &amp; expression"],
+    suitable:"Suitable for children aged <b>5–15 years</b>, from UKG / Class 1 onwards — from complete beginners to those refining fluency.",
+    outcomes:"Improved Marathi reading, writing and everyday communication confidence — and a stronger connection to the language and culture.",
+    faqs:[
+      ["Is this only for Marathi-medium students?","No, it's designed for children from any medium — CBSE, ICSE or Semi-English — looking to strengthen their Marathi."],
+      ["Will this help in school Marathi exams?","Yes. The program is aligned with school Marathi syllabi and directly improves performance in written and oral assessments."]
+    ]
   },
   "teacher-training":{
-    color:"#155B50,#1F7A6C", overview:"A professional development program for teachers — covering modern pedagogy, classroom management and subject-specific teaching techniques used at Rits Classes.",
-    benefits:["Modern teaching techniques","Stronger classroom management","Subject-specific training modules","Certification on completion"],
-    learn:["Child-centric teaching methods","Classroom engagement strategies","Assessment &amp; feedback techniques","Program-specific training (Abacus, Phonics, etc.)"],
-    suitable:"Designed for aspiring and practicing teachers looking to build or refine their teaching skills.",
-    outcomes:"Teachers leave with practical, classroom-ready techniques and a recognised certification.",
-    faqs:[["Do I need prior teaching experience?","No prior experience is required — the program supports both new and experienced teachers."]]
+    color:"#155B50,#1F7A6C",
+    tagline:"Teach Smarter. Impact Deeper.",
+    heroDesc:"A Teacher Training Program is a professional course that teaches participants how to teach children effectively — using structured methods, activities, teaching techniques and classroom management skills. Whether you're just starting out or looking to level up, this program gives you the tools to teach with confidence.",
+    ageRange:"18+ years",
+    ageBest:"18+ years",
+    stdFrom:"Graduates, students &amp; working professionals",
+    overview:"A professional development program for teachers — covering modern pedagogy, classroom management and subject-specific teaching techniques used at Rits Classes.",
+    benefits:[
+      {icon:"👩‍🏫", label:"Effective Teaching Techniques", desc:"Learn structured methods that keep children engaged and genuinely learning."},
+      {icon:"🔤", label:"Phonics Teaching Methodology", desc:"Understand how to teach letter-sound connections step by step to young learners."},
+      {icon:"📖", label:"Reading &amp; Pronunciation Techniques", desc:"Equip yourself to guide children from first sounds to confident, fluent reading."},
+      {icon:"🎯", label:"Activity-Based Teaching", desc:"Move beyond textbook delivery — use activities and games that make concepts stick."},
+      {icon:"🧠", label:"Child Learning &amp; Engagement", desc:"Understand how children learn at different ages and how to keep them motivated."},
+      {icon:"📝", label:"Lesson Planning", desc:"Build structured, purposeful lesson plans that deliver clear outcomes every session."},
+      {icon:"🎲", label:"Teaching Aids &amp; Classroom Activities", desc:"Learn to design and use tools, worksheets and activities that support learning."},
+      {icon:"👥", label:"Classroom Management", desc:"Handle diverse learners, manage time and maintain an effective learning environment."}
+    ],
+    learn:["Effective teaching techniques","Phonics teaching methodology","Reading &amp; pronunciation methods","Activity-based &amp; game-based teaching","Child learning &amp; engagement techniques","Lesson planning &amp; structuring sessions","Teaching aids &amp; classroom activities","Classroom management skills","How to conduct online &amp; offline classes","How to start and manage your own classes"],
+    suitable:"Open to anyone aged <b>18 years and above</b> — students, graduates, homemakers and working professionals. <b>No prior teaching experience is required</b> for the beginner-level program.",
+    outcomes:"Participants leave with practical, classroom-ready teaching techniques, the confidence to run their own sessions, and a recognised certification.",
+    faqs:[
+      ["Do I need prior teaching experience?","No prior experience is required — the program is designed to support both first-time and experienced teachers at their respective levels."],
+      ["Can I start my own classes after this program?","Yes. The program includes guidance on how to set up, market and manage your own teaching classes — online or offline."],
+      ["Is this certification recognised?","Yes, participants receive a certificate on successful completion of the program from Rits Classes."]
+    ]
+  },
+  "rubiks-cube":{
+    color:"#1F7A6C,#155B50",
+    tagline:"Think. Twist. Solve.",
+    heroDesc:"A Rubik's Cube is a 3D puzzle made of small coloured squares. Children learn to solve the cube step-by-step using logic, patterns and specific techniques. With regular practice, they build mental speed, patience and a systematic approach to problem-solving that goes far beyond the cube.",
+    ageRange:"7–16 years",
+    ageBest:"7–8 years",
+    stdFrom:"Class 2 onwards",
+    overview:"Our Rubik's Cube program teaches children to solve the iconic 3D puzzle through structured steps, pattern recognition and logical thinking — building skills that benefit them across academics and life.",
+    benefits:[
+      {icon:"🧠", label:"Improves Memory", desc:"Learning and recalling sequences of moves sharpens short and long-term memory significantly."},
+      {icon:"🎯", label:"Develops Concentration", desc:"Solving a cube demands sustained, focused attention — building exceptional concentration over time."},
+      {icon:"🧩", label:"Builds Logical Thinking", desc:"Children learn to break a complex problem into smaller, manageable steps — a life skill."},
+      {icon:"💡", label:"Improves Problem-Solving Skills", desc:"Recognising patterns and applying the right technique trains systematic thinking."},
+      {icon:"👀", label:"Develops Visual &amp; Spatial Skills", desc:"Children visualise 3D movement and spatial rotation, strengthening a rare cognitive skill."},
+      {icon:"✋", label:"Improves Hand-Eye Coordination", desc:"Precise, rapid finger movements develop fine motor skills and coordination."},
+      {icon:"⚡", label:"Improves Speed &amp; Focus", desc:"As children advance, they work toward faster solve times — sharpening both speed and attention."},
+      {icon:"🏆", label:"Encourages a Growth Mindset", desc:"Every failed attempt teaches children to try again — building resilience and confidence."}
+    ],
+    learn:["Basic cube notation &amp; terminology","Layer-by-layer (LBL) solving method","Pattern recognition techniques","Algorithm memorisation &amp; application","Improving solve speed","Advanced solving strategies (for enthusiasts)"],
+    suitable:"Best suited for children aged <b>7–16 years</b>, from Class 2 onwards. Younger children can also join with additional guidance.",
+    outcomes:"Children progress from not knowing where to start, to solving the cube independently — with improved logic, patience and a genuine sense of achievement.",
+    faqs:[
+      ["My child has never touched a Rubik's Cube — is that okay?","Absolutely. We start from scratch — no prior experience needed. Most children solve their first cube within the first few weeks."],
+      ["What size cube do we use?","We begin with the standard 3×3 cube. Advanced students may progress to 4×4 and other puzzles."],
+      ["Does solving a Rubik's Cube really help with studies?","Yes — the concentration, logical thinking and memory skills developed transfer directly to academic performance."]
+    ]
   }
 };
 
@@ -1457,7 +1558,8 @@ document.getElementById('lightbox').onclick=(e)=>{ if(e.target.id==='lightbox') 
 /* ---------- FAQ ---------- */
 const faqs = [
   {q:"What age groups do you teach?", a:"We work with children across primary and middle school age groups, with programs tailored to each stage of learning."},
-  {q:"Which programs are available?", a:"Abacus, Phonics, Vedic Math, Handwriting, Grammar, Magic Tables, Spoken English, Marathi, and Teacher Training."},
+  {q:"Which programs are available?", a:"Abacus, Phonics, Vedic Math, Handwriting, Grammar, Magic Tables, Spoken English, Marathi, Rubik's Cube, and Teacher Training — 10 programs in all."},
+  {q:"Do you offer Rubik's Cube classes?", a:"Yes! Our Rubik's Cube program is open to children from Class 2 onwards (age 7+). Children learn step-by-step solving methods that build logic, concentration, memory and problem-solving skills."},
   {q:"Where are the classes located?", a:"Rits Classes is located at Rahatani, near Kalewadi-Rahatani Road, Pimpri-Chinchwad, Maharashtra 411017."},
   {q:"How can I enquire about admission?", a:"You can WhatsApp us, call 090962 13116, or fill out the contact form on this page — we typically respond the same day."},
   {q:"Do you offer spoken English classes?", a:"Yes, our Spoken English program focuses on pronunciation, vocabulary, fluency and everyday communication confidence."},
