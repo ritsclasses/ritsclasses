@@ -279,6 +279,114 @@ header.nav.scrolled{
 .cm-faq .faq-item{border-color:var(--line);}
 .cm-actions{display:flex; gap:12px; margin-top:30px; flex-wrap:wrap;}
 
+/* ===== RICH COURSE MODAL (Abacus / Phonics) ===== */
+.cm-hero-band{
+  display:grid; grid-template-columns:1.1fr .9fr; gap:0;
+  padding:44px 44px 40px; position:relative; overflow:hidden;
+}
+.cm-hero-band::after{
+  content:""; position:absolute; right:-60px; top:-60px;
+  width:280px; height:280px; border-radius:50%;
+  background:rgba(255,255,255,.07); pointer-events:none;
+}
+.cm-hero-left{ padding-right:32px; }
+.cm-hero-icon{font-size:40px; margin-bottom:12px; line-height:1;}
+.cm-hero-tag{
+  font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:rgba(255,255,255,.7); font-weight:700; margin-bottom:10px;
+}
+.cm-hero-title{color:#fff; font-size:clamp(26px,4vw,36px); margin-bottom:14px; line-height:1.1;}
+.cm-hero-desc{color:rgba(255,255,255,.88); font-size:14.5px; line-height:1.65; margin:0;}
+
+.cm-hero-pills{
+  display:flex; flex-direction:column; gap:10px; justify-content:center;
+}
+.cm-pill{
+  background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.2);
+  border-radius:14px; padding:12px 16px; backdrop-filter:blur(4px);
+}
+.cm-pill-label{
+  display:block; font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:rgba(255,255,255,.6); margin-bottom:4px; font-weight:700;
+}
+.cm-pill-val{color:#fff; font-weight:700; font-size:14px;}
+.cm-pill-note{font-size:12.5px; color:rgba(255,255,255,.72); font-style:italic; border-style:dashed;}
+
+.cm-rich-body{background:var(--paper);}
+
+.cm-section{padding:30px 40px;}
+.cm-section-alt{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+
+.cm-section-head{display:flex; align-items:center; gap:10px; margin-bottom:20px;}
+.cm-section-icon{
+  width:34px; height:34px; border-radius:10px; display:flex; align-items:center;
+  justify-content:center; font-size:16px; flex-shrink:0;
+}
+.cm-section-title{font-family:'Fraunces',serif; font-size:18px; font-weight:600; color:var(--ink);}
+
+/* Benefits grid */
+.cm-benefits-grid{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:12px;
+}
+.cm-benefit-card{
+  display:flex; align-items:flex-start; gap:12px;
+  background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px;
+  transition:box-shadow .2s, transform .2s;
+}
+.cm-benefit-card:hover{box-shadow:0 8px 24px -8px rgba(24,40,72,.15); transform:translateY(-2px);}
+.cm-benefit-icon{font-size:22px; flex-shrink:0; margin-top:1px;}
+.cm-benefit-label{display:block; font-size:13.5px; font-weight:700; color:var(--ink); margin-bottom:3px;}
+.cm-benefit-desc{font-size:12.5px; color:var(--ink-soft); margin:0; line-height:1.5;}
+
+/* Learn list */
+.cm-learn-list{display:flex; flex-direction:column; gap:10px;}
+.cm-learn-item{
+  display:flex; align-items:center; gap:12px;
+  font-size:14.5px; color:var(--ink); font-weight:500;
+}
+.cm-learn-check{
+  width:24px; height:24px; border-radius:8px; display:flex; align-items:center;
+  justify-content:center; font-size:12px; font-weight:900; flex-shrink:0;
+}
+
+/* Who & outcomes */
+.cm-who-row{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.cm-who-block{background:var(--paper-alt); border:1px solid var(--line); border-radius:16px; padding:20px 22px;}
+.cm-who-text{font-size:14px; color:var(--ink-soft); margin:0; line-height:1.65;}
+.cm-who-text b{color:var(--ink);}
+
+/* FAQ */
+.cm-faq-list{display:flex; flex-direction:column; gap:10px;}
+.cm-faq-item{
+  background:var(--paper-alt); border:1px solid var(--line); border-radius:14px; overflow:hidden;
+}
+.cm-faq-q{
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:none; border:none; padding:15px 18px; font-size:14px; font-weight:700;
+  color:var(--ink); cursor:pointer; text-align:left;
+}
+.cm-faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+.cm-faq-a p{margin:0; padding:0 18px 16px; font-size:13.5px; color:var(--ink-soft); line-height:1.65;}
+.cm-faq-item.open .cm-faq-q .plus{transform:rotate(45deg);}
+.cm-faq-item.open .cm-faq-q{color:var(--teal-deep);}
+
+/* CTA band */
+.cm-cta-band{
+  margin:0; padding:32px 40px; display:flex; align-items:center;
+  justify-content:space-between; gap:24px; flex-wrap:wrap;
+}
+.cm-cta-text{color:rgba(255,255,255,.88); font-size:15px; margin:0; max-width:400px; line-height:1.5;}
+.cm-cta-btns{display:flex; gap:12px; flex-wrap:wrap;}
+
+@media(max-width:700px){
+  .cm-hero-band{grid-template-columns:1fr; padding:28px 22px 24px;}
+  .cm-hero-left{padding-right:0; margin-bottom:20px;}
+  .cm-section{padding:24px 20px;}
+  .cm-benefits-grid{grid-template-columns:1fr;}
+  .cm-who-row{grid-template-columns:1fr;}
+  .cm-cta-band{padding:24px 20px; flex-direction:column; align-items:flex-start;}
+}
+
 /* ===== WHY SECTION ===== */
 .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line); border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line);}
 .why-card{background:var(--card); padding:36px 30px;}
@@ -930,20 +1038,60 @@ programs.forEach((p,i)=>{
 /* ---------- COURSE DETAIL MODAL ---------- */
 const courseDetails = {
   "abacus":{
-    color:"#182848,#2a4a8a", overview:"Our Abacus program trains children to visualize and solve calculations mentally using the abacus tool — building speed, accuracy and deep number sense from an early age.",
-    benefits:["Faster mental calculation","Sharper concentration &amp; memory","Improved listening skills","Boosted number confidence"],
-    learn:["Bead-based number representation","Addition &amp; subtraction techniques","Multiplication &amp; division basics","Mental math without the abacus"],
-    suitable:"Best suited for children aged <b>5–12 years</b>, with batches grouped by age and current skill level.",
-    outcomes:"Children typically show noticeably faster calculation speed and improved focus within a few months of regular practice.",
-    faqs:[["How long is the program?","Abacus is taught in structured levels, typically progressing over several months with weekly classes."],["Does my child need an abacus at home?","Yes, a personal abacus is recommended for practice, which our team can help you source."]]
+    color:"#182848,#2a4a8a",
+    tagline:"Mental Math Mastery",
+    heroDesc:"Abacus is a mathematical learning tool with beads that helps children understand numbers and perform calculations. With regular practice, children gradually learn to visualize the abacus in their mind — and calculate mentally, without writing.",
+    ageRange:"5–13 years",
+    ageBest:"5–7 years",
+    stdFrom:"UKG / Std. 1 onwards",
+    stdNote:"Can continue through Std. 2 to Std. 7 based on child's interest and course level.",
+    benefits:[
+      {icon:"🧮", label:"Calculation Speed & Accuracy", desc:"Children solve problems significantly faster with practice."},
+      {icon:"🧠", label:"Memory Development", desc:"Regular bead-based practice sharpens short and long-term memory."},
+      {icon:"🎯", label:"Concentration", desc:"The focused bead movement builds exceptional attention spans."},
+      {icon:"👀", label:"Visualization Skills", desc:"Children learn to picture the abacus mentally and calculate without it."},
+      {icon:"💡", label:"Logical Thinking", desc:"Strengthens problem-solving and number-pattern recognition."},
+      {icon:"➕", label:"Strong Math Foundation", desc:"Builds deep number sense, not just rote calculation."},
+      {icon:"😊", label:"Math Confidence", desc:"Children stop fearing maths and begin to enjoy it."},
+      {icon:"⚡", label:"Mental Calculation", desc:"The ultimate goal — fast, accurate arithmetic with no pen or calculator."}
+    ],
+    learn:["Bead-based number representation","Addition &amp; subtraction using the abacus","Multiplication &amp; division basics","Mental arithmetic — calculating without the physical abacus","Listening skills through dictation drills","Multi-digit calculations at increasing speed"],
+    suitable:"Best suited for children aged <b>5–13 years</b>. The ideal starting age is 5–7, from UKG or Std. 1 — when the child can recognize and write numbers. Batches are grouped by age and current skill level.",
+    outcomes:"Children show noticeably faster calculation speed and sharper focus within a few months of regular practice.",
+    faqs:[
+      ["What age is best to start?","The ideal age to start is 5–7 years. Children can begin from UKG / Std. 1 once they can recognise and write numbers. The program can continue up to Std. 7."],
+      ["How long is the program?","Abacus is taught in structured levels — each level progressing over several months with weekly classes. Most children complete 4–8 levels depending on their pace."],
+      ["Does my child need an abacus at home?","Yes, a personal abacus is recommended for daily practice. Our team can help you source one at the time of enrollment."],
+      ["What if my child is already in Std. 4 or Std. 5?","Older children can still join — the program is level-based, not age-locked. Many children in Std. 3–7 benefit greatly from the speed and mental math focus."]
+    ]
   },
   "phonics":{
-    color:"#155B50,#1F7A6C", overview:"Phonics builds the foundation of reading by helping children connect letters to sounds — the essential first step toward fluent, confident reading and pronunciation.",
-    benefits:["Clearer pronunciation","Stronger reading fluency","Better spelling accuracy","Foundational vocabulary growth"],
-    learn:["Letter-sound relationships","Blending &amp; segmenting sounds","Sight word recognition","Reading simple sentences aloud"],
-    suitable:"Ideal for early learners aged <b>4–8 years</b> who are beginning or strengthening their reading journey.",
-    outcomes:"Children read more confidently, pronounce words more clearly, and build a strong base for advanced English skills.",
-    faqs:[["Is this only for beginners?","It's ideal for beginners, but also helps older children who need to strengthen reading fundamentals."]]
+    color:"#155B50,#1F7A6C",
+    tagline:"Read. Spell. Speak. Shine.",
+    heroDesc:"Phonics is a method of teaching children to read and spell by connecting letters with their sounds. For example: A → /a/ as in Apple 🍎, B → /b/ as in Ball ⚽. It is the most proven first step toward confident, fluent reading.",
+    ageRange:"3–10 years",
+    ageBest:"3–6 years",
+    stdFrom:"Nursery / Jr. KG onwards",
+    stdNote:"Especially useful for Nursery, Jr. KG, Sr. KG and Std. 1–10. Older children can also join if they need help with reading, spelling or pronunciation.",
+    benefits:[
+      {icon:"📖", label:"Strong Reading Skills", desc:"Children move from letter recognition to reading full sentences with ease."},
+      {icon:"🔤", label:"Letter-Sound Connection", desc:"Builds the core understanding that every letter has a sound of its own."},
+      {icon:"🗣️", label:"Clear Pronunciation", desc:"Children speak English sounds accurately — a skill for life."},
+      {icon:"✍️", label:"Better Spelling", desc:"Understanding sounds naturally leads to correct, confident spelling."},
+      {icon:"🧠", label:"Vocabulary Growth", desc:"As reading improves, children encounter and retain more words."},
+      {icon:"👀", label:"Word Recognition", desc:"Children quickly identify words they've seen before — reading speed increases."},
+      {icon:"📚", label:"Read Unfamiliar Words", desc:"Children can phonically decode any new word — no longer dependent on memorisation."},
+      {icon:"😊", label:"Confidence in English", desc:"Reading success creates a powerful feedback loop of self-belief."}
+    ],
+    learn:["Letter-sound (phoneme) relationships","Blending sounds to read words","Segmenting words to spell them","Sight word recognition for common words","Reading simple sentences and short passages aloud","Pronunciation and intonation for everyday English"],
+    suitable:"Ideal for early learners from <b>Nursery / Jr. KG (age 3+)</b>. Older children up to Std. 10 who struggle with reading, spelling or pronunciation also benefit strongly.",
+    outcomes:"Children read more confidently, pronounce words more clearly, and build a strong foundation for advanced English learning.",
+    faqs:[
+      ["What age should my child start Phonics?","The best age to start is 3–6 years, from Nursery or Jr. KG. However, older children up to age 10 (and beyond in special cases) benefit greatly if they have gaps in reading or pronunciation."],
+      ["Is Phonics only for beginners?","It begins from scratch but progressively builds. Even children in Std. 3–5 who struggle with spelling or reading unfamiliar words benefit from Phonics."],
+      ["Will this interfere with my child's school English?","Not at all — Phonics directly supports and strengthens what is taught in school. Most schools themselves use phonics-based methods in early classes."],
+      ["My child can read a little. Is it too late?","No. We assess each child's current level and start where they are, so no child is bored or overwhelmed."]
+    ]
   },
   "vedic-math":{
     color:"#C6416B,#e07094", overview:"Vedic Math introduces ancient calculation techniques that make arithmetic dramatically faster and more intuitive — turning math from a chore into a game.",
@@ -1012,35 +1160,148 @@ function openCourseModal(key){
   if(!p || !d) return;
   const [c1,c2] = d.color.split(',');
   const waLink = `https://wa.me/919096213116?text=${encodeURIComponent('Hello Rits Classes, I would like to enquire about your '+p.name+' classes.')}`;
-  courseModal.innerHTML = `
-    <button class="course-modal-close" id="cmClose">✕</button>
-    <div class="course-modal-hero" style="background:linear-gradient(135deg, ${c1}, ${c2});">
-      <div class="pic">${p.icon}</div>
-      <h3>${p.name}</h3>
-      <p>${d.overview}</p>
-    </div>
-    <div class="course-modal-body">
-      <div class="course-modal-video">
-        <div class="play">▶</div>
-        Program video coming soon — check back for a walkthrough of our ${p.name} classes.
+
+  /* Rich layout for Abacus & Phonics; classic layout for others */
+  const isRich = d.tagline && d.benefits && d.benefits[0] && d.benefits[0].icon;
+
+  if(isRich){
+    courseModal.innerHTML = `
+      <button class="course-modal-close" id="cmClose">✕</button>
+
+      <!-- HERO BAND -->
+      <div class="cm-hero-band" style="background:linear-gradient(145deg,${c1} 0%,${c2} 100%);">
+        <div class="cm-hero-left">
+          <div class="cm-hero-icon">${p.icon}</div>
+          <div class="cm-hero-tag">${d.tagline}</div>
+          <h3 class="cm-hero-title">${p.name}</h3>
+          <p class="cm-hero-desc">${d.heroDesc}</p>
+        </div>
+        <div class="cm-hero-pills">
+          <div class="cm-pill">
+            <span class="cm-pill-label">Age Range</span>
+            <span class="cm-pill-val">👧🏻 ${d.ageRange}</span>
+          </div>
+          <div class="cm-pill">
+            <span class="cm-pill-label">Best Age to Start</span>
+            <span class="cm-pill-val">⭐ ${d.ageBest}</span>
+          </div>
+          <div class="cm-pill">
+            <span class="cm-pill-label">Starts From</span>
+            <span class="cm-pill-val">🏫 ${d.stdFrom}</span>
+          </div>
+          <div class="cm-pill cm-pill-note">${d.stdNote}</div>
+        </div>
       </div>
-      <div class="cm-grid">
-        <div class="cm-block"><h4>Key Benefits</h4><ul>${d.benefits.map(b=>`<li>${b}</li>`).join('')}</ul></div>
-        <div class="cm-block"><h4>What Children Learn</h4><ul>${d.learn.map(b=>`<li>${b}</li>`).join('')}</ul></div>
+
+      <div class="cm-rich-body">
+
+        <!-- BENEFITS GRID -->
+        <div class="cm-section">
+          <div class="cm-section-head">
+            <span class="cm-section-icon" style="background:${c1}22; color:${c1};">⭐</span>
+            <span class="cm-section-title">Benefits of ${p.name}</span>
+          </div>
+          <div class="cm-benefits-grid">
+            ${d.benefits.map(b=>`
+              <div class="cm-benefit-card">
+                <span class="cm-benefit-icon">${b.icon}</span>
+                <div>
+                  <b class="cm-benefit-label">${b.label}</b>
+                  <p class="cm-benefit-desc">${b.desc}</p>
+                </div>
+              </div>`).join('')}
+          </div>
+        </div>
+
+        <!-- WHAT CHILDREN LEARN -->
+        <div class="cm-section cm-section-alt">
+          <div class="cm-section-head">
+            <span class="cm-section-icon" style="background:${c2}22; color:${c2};">📚</span>
+            <span class="cm-section-title">What Children Learn</span>
+          </div>
+          <ul class="cm-learn-list">
+            ${d.learn.map(l=>`<li class="cm-learn-item"><span class="cm-learn-check" style="background:${c1}18; color:${c1};">✓</span>${l}</li>`).join('')}
+          </ul>
+        </div>
+
+        <!-- WHO IT'S FOR + OUTCOMES -->
+        <div class="cm-section">
+          <div class="cm-who-row">
+            <div class="cm-who-block">
+              <div class="cm-section-head">
+                <span class="cm-section-icon" style="background:#FEF1DA; color:#D9860F;">👤</span>
+                <span class="cm-section-title">Who It's For</span>
+              </div>
+              <p class="cm-who-text">${d.suitable}</p>
+            </div>
+            <div class="cm-who-block">
+              <div class="cm-section-head">
+                <span class="cm-section-icon" style="background:#DEF0EC; color:#155B50;">🎯</span>
+                <span class="cm-section-title">Learning Outcomes</span>
+              </div>
+              <p class="cm-who-text">${d.outcomes}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="cm-section cm-section-alt">
+          <div class="cm-section-head">
+            <span class="cm-section-icon" style="background:#FBE4EB; color:#C6416B;">❓</span>
+            <span class="cm-section-title">Frequently Asked Questions</span>
+          </div>
+          <div class="cm-faq-list">
+            ${d.faqs.map(([q,a],i)=>`
+              <div class="faq-item cm-faq-item" data-i="${i}">
+                <button class="faq-q cm-faq-q"><span>${q}</span><span class="plus">+</span></button>
+                <div class="faq-a cm-faq-a"><p>${a}</p></div>
+              </div>`).join('')}
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cm-cta-band" style="background:linear-gradient(135deg,${c1} 0%,${c2} 100%);">
+          <p class="cm-cta-text">Interested in enrolling your child? We're happy to answer any questions.</p>
+          <div class="cm-cta-btns">
+            <a href="${waLink}" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp Enquiry</a>
+            <a href="#contact" class="btn btn-ghost-light" id="cmContactLink">Send a Message</a>
+          </div>
+        </div>
+
+      </div>`;
+  } else {
+    courseModal.innerHTML = `
+      <button class="course-modal-close" id="cmClose">✕</button>
+      <div class="course-modal-hero" style="background:linear-gradient(135deg, ${c1}, ${c2});">
+        <div class="pic">${p.icon}</div>
+        <h3>${p.name}</h3>
+        <p>${d.overview}</p>
       </div>
-      <div class="cm-suitable"><b>Who it's for:</b> ${d.suitable}<br><br><b>Learning outcomes:</b> ${d.outcomes}</div>
-      <div class="cm-block cm-faq"><h4>Quick FAQ</h4>
-        ${d.faqs.map(([q,a])=>`<div class="faq-item"><button class="faq-q"><span>${q}</span><span class="plus">+</span></button><div class="faq-a"><p>${a}</p></div></div>`).join('')}
-      </div>
-      <div class="cm-actions">
-        <a href="${waLink}" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Enquiry</a>
-        <a href="#contact" class="btn btn-outline" id="cmContactLink">Send Contact Form</a>
-      </div>
-    </div>`;
-  courseModal.querySelectorAll('.cm-faq .faq-item').forEach(item=>{
+      <div class="course-modal-body">
+        <div class="course-modal-video">
+          <div class="play">▶</div>
+          Program video coming soon — check back for a walkthrough of our ${p.name} classes.
+        </div>
+        <div class="cm-grid">
+          <div class="cm-block"><h4>Key Benefits</h4><ul>${d.benefits.map(b=>`<li>${b}</li>`).join('')}</ul></div>
+          <div class="cm-block"><h4>What Children Learn</h4><ul>${d.learn.map(b=>`<li>${b}</li>`).join('')}</ul></div>
+        </div>
+        <div class="cm-suitable"><b>Who it's for:</b> ${d.suitable}<br><br><b>Learning outcomes:</b> ${d.outcomes}</div>
+        <div class="cm-block cm-faq"><h4>Quick FAQ</h4>
+          ${d.faqs.map(([q,a])=>`<div class="faq-item"><button class="faq-q"><span>${q}</span><span class="plus">+</span></button><div class="faq-a"><p>${a}</p></div></div>`).join('')}
+        </div>
+        <div class="cm-actions">
+          <a href="${waLink}" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Enquiry</a>
+          <a href="#contact" class="btn btn-outline" id="cmContactLink">Send Contact Form</a>
+        </div>
+      </div>`;
+  }
+  /* Wire FAQs — covers both rich (.cm-faq-item) and classic (.cm-faq .faq-item) layouts */
+  courseModal.querySelectorAll('.faq-item').forEach(item=>{
     const q = item.querySelector('.faq-q'); const a = item.querySelector('.faq-a');
+    if(!q || !a) return;
     q.onclick = ()=>{ const open=item.classList.contains('open');
-      courseModal.querySelectorAll('.cm-faq .faq-item').forEach(i=>{i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight=null;});
+      courseModal.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open'); const ia=i.querySelector('.faq-a'); if(ia) ia.style.maxHeight=null;});
       if(!open){ item.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; } };
   });
   document.getElementById('cmClose').onclick = closeCourseModal;
